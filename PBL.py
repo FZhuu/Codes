@@ -56,6 +56,7 @@ while True:
                                 add_saldo = input("\nDigite quanto deseja recarregar: ").strip()
                                 if add_saldo.isalpha():
                                     print("\nCarácter inválido")
+                                    print("Tente novamente.")
                                     print("\n============================================")
                                     continue
                                 if add_saldo:
@@ -65,6 +66,7 @@ while True:
                                 else:
                                     print("\nCaracter não identificado.")
                                     print("Tente novamente.")
+                                    print("\n============================================")
                             continue
                         elif opção_menu == "3":
                             print("\n===========================================")
