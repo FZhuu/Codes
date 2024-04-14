@@ -1,17 +1,16 @@
-
 saldo = 0
 valor_passagem = 0
 contador = 0
 adcional = True
 menu = True
-menu_usu = True
-menu_usu_1 = True
+menu_senha_usu = True
+menu_adm_senha = True
 menu_1 = True
 while True:
     adcional = True
     menu = True
-    menu_usu = True
-    menu_usu_1 = True
+    menu_senha_usu = True
+    menu_adm_senha = True
     menu_1 = True
     contador = 0
     print("============= Opções de contas =============")
@@ -24,7 +23,7 @@ while True:
 
     if conta == "1" :
         print("\nBem vindo a página de login do usuário. ")
-        while menu_usu:
+        while menu_senha_usu:
             senha1 = input("\nPara continuar, por favor, digite a senha: ")
             while contador <= 2:
                 if senha1 == "123456":
@@ -56,7 +55,6 @@ while True:
                                 add_saldo = input("\nDigite quanto deseja recarregar: ").strip()
                                 if add_saldo.isalpha():
                                     print("\nCarácter inválido")
-                                    print("Tente novamente.")
                                     print("\n============================================")
                                     continue
                                 if add_saldo:
@@ -66,12 +64,11 @@ while True:
                                 else:
                                     print("\nCaracter não identificado.")
                                     print("Tente novamente.")
-                                    print("\n============================================")
                             continue
                         elif opção_menu == "3":
                             print("\n===========================================")
                             print("Voltando para página inicial")
-                            menu_usu = False
+                            menu_senha_usu = False
                             menu = False
                             break
                         else:
@@ -81,13 +78,13 @@ while True:
                     contador += 1
                     print("\nSenha incorreta. Tentativas restantes:", 3 - contador)
                     if contador == 3:
-                        menu_usu = False
+                        menu_senha_usu = False
                         print("\nNúmero máximo de tentativas excedido.")
                         break
                 break
     elif conta == "2" :
         print("\nBem vindo a página de login do administrador. ")
-        while menu_usu_1:
+        while menu_adm_senha:
             senha_adm = input("\nPara continuar, por favor digite a senha de administrador: ")
             while contador <= 2 :
                 if senha_adm == "123456":
@@ -116,7 +113,7 @@ while True:
                             print("\n============================================")
                         elif opção_menu == "3":
                             menu_1 = False
-                            menu_usu_1 = False
+                            menu_adm_senha = False
                             break
                         else:
                             print("============================================")
@@ -129,7 +126,7 @@ while True:
                     contador += 1
                     print("\nSenha incorreta. Tentativas restantes:", 3 - contador)
                     if contador == 3:
-                        menu_usu_1 = False
+                        menu_adm_senha = False
                         print("\nNúmero máximo de tentativas excedido.")
                         break
                 break   
