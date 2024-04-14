@@ -2,10 +2,10 @@ saldo = 0
 valor_passagem = 0
 contador = 0
 adcional = True
-menu = True
+menu_usu = True
 menu_senha_usu = True
 menu_adm_senha = True
-menu_1 = True
+menu_adm = True
 while True:
     adcional = True
     menu = True
@@ -29,7 +29,7 @@ while True:
                 if senha1 == "123456":
                     contador = 0
                     print("\nBem vindo a página do Usuário!")
-                    while menu:
+                    while menu_usu:
                         adcional = True
                         print("\n============== Opções de menu ==============")
                         print("1 = Usar cartão")
@@ -69,7 +69,7 @@ while True:
                             print("\n===========================================")
                             print("Voltando para página inicial")
                             menu_senha_usu = False
-                            menu = False
+                            menu_usu = False
                             break
                         else:
                             print("tente novamente")
@@ -90,7 +90,7 @@ while True:
                 if senha_adm == "123456":
                     contador == 0
                     
-                    while menu_1:
+                    while menu_adm:
                         print("\nBem vindo a página do administrador")
                         print("\n============== Opções de menu ==============")
                         print("1 = definir preço da passagem")
@@ -112,7 +112,7 @@ while True:
                             print("\nSaldo atual:",saldo)
                             print("\n============================================")
                         elif opção_menu == "3":
-                            menu_1 = False
+                            menu_adm = False
                             menu_adm_senha = False
                             break
                         else:
